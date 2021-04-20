@@ -12,11 +12,7 @@ const orm = {
             cb(result);
         });
     },
-// 
-/*
-INSERT INTO burgers_db.burgers (burger_name, devoured)
-VALUES ('Big JZ', TRUE);
-*/
+
     insertOne: (table, object, cb) => {
         const sql = "INSERT INTO " + table + " (burger_name, devoured) VALUES (?,?)" 
         connection.query(
