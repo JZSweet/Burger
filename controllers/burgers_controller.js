@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/api/burger', (req, res) => {
+router.post('/api/burgers', (req, res) => {
     const { burger_name, devoured } = req.body;
     burgers.insertOne({
         burger_name,
@@ -22,7 +22,7 @@ router.post('/api/burger', (req, res) => {
     });
 });
 
-router.put('/api/burger/:id', (req, res) => {
+router.put('/api/burgers/:id', (req, res) => {
     const condition = req.params.id;
     const { devoured } = req.body;
     burgers.updateOne({
