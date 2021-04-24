@@ -14,9 +14,9 @@ const orm = {
     },
 
     insertOne: (table, object, cb) => {
-        const sql = "INSERT INTO " + table + " (burger_name, devoured) VALUES (?,?)" 
+        const sql = "INSERT INTO " + table + " (burger_name, devoured) VALUES (?,?)"
         connection.query(
-             sql,[object.burger_name,object.devoured],
+            sql, [object.burger_name, object.devoured],
             (err, res) => {
                 if (err) throw err;
                 cb(res);
@@ -24,9 +24,18 @@ const orm = {
         );
     },
 
-    updateOne: (table, object, condition, cb) => {
-        var queryString = "UPDATE" + table + "SET devoured" + "WHERE id =" + condition;
+    updateOne: (table, objColVals, condition, cb) => {
+        console.log("aspf",table, objColVals, condition)
+        // var queryString = "UPDATE" + table;
 
+        // queryString += " SET ";
+        // // queryString += objToSql(objColVals);
+        // queryString += " WHERE ";
+        // queryString += condition;
+
+        var queryString = `UPDATE burgers SET devoured=${objColVals.devoured !== "1"} Where id=${condition};`
+
+        console.log(queryString);
         connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;
