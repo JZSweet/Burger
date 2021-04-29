@@ -25,16 +25,7 @@ const orm = {
     },
 
     updateOne: (table, objColVals, condition, cb) => {
-        console.log("aspf",table, objColVals, condition)
-        // var queryString = "UPDATE" + table;
-
-        // queryString += " SET ";
-        // // queryString += objToSql(objColVals);
-        // queryString += " WHERE ";
-        // queryString += condition;
-
         var queryString = `UPDATE burgers SET devoured=${objColVals.devoured !== "1"} Where id=${condition};`
-
         console.log(queryString);
         connection.query(queryString, (err, result) => {
             if (err) {
