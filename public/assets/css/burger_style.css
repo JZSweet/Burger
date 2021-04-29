@@ -1,0 +1,36 @@
+body
+{
+    text-align: center;
+    background-color: #fec89a;
+    color: #14213d;
+    background-image: url(../img/back.png);
+    background-size:cover;
+}
+
+header{
+    font-size: 50px;
+    position: top;
+}
+
+
+ul {
+    font-size: 24px;
+}
+
+.burgerAside {
+    /* background-image: url(../img/burger.png); */
+    /* background-size:contain; */
+    float: left;
+    color:#1d3557;
+}
+
+.devouredAside {
+    float: right;
+    margin-right: 90px;
+    color:#1d3557;
+}
+
+footer{
+    float: bottom;
+    color:#1d3557;
+}
