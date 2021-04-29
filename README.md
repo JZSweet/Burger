@@ -1,7 +1,7 @@
 # Burger
 
 ## Heroku URL
-
+https://burger-jz.herokuapp.com/
 
 ## Description
 This is a restaurant app that lets users input the names of burgers they'd like to eat. Build with MySQL, Node, Express, Handlebars and a homemade ORM followed the MVC design pattern. Use Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.
