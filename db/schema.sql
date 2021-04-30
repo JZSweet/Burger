@@ -8,7 +8,7 @@ CREATE TABLE `burgers` (
 	`devoured` BOOLEAN,
 	PRIMARY KEY ( `id` )
 ); 
-
+ 
 INSERT INTO burgers (burger_name, devoured)
 VALUES ('Big Mac', FALSE);
 INSERT INTO burgers (burger_name, devoured)
